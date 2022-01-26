@@ -7,6 +7,14 @@
  */
 
 function forEach(array, callback) {
+    if (!Array.isArray(array)) {
+        throw new TypeError(array + ' is not an Array');
+    }
+
+    if (typeof callback !== 'function') {
+        throw new TypeError(callback + ' is not a function');
+    }
+
     for (let index = 0; index < array.length; index++) {
         callback(array[index], index, array);
     }
