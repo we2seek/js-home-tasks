@@ -20,15 +20,7 @@ function reduce(array, callback, result) {
         throw new TypeError(result + ' is not a string or number');
     }
 
-    let i = 0;
-
-    // accumulator hasn't been passed 
-    if (arguments.length < 3) {
-        i = 1;
-        result = array[0];
-    }
-
-    for (; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         result = callback(result, array[i], i, array);
     }
 
