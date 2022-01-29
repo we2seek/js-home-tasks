@@ -33,4 +33,4 @@ const result = reduceRight(arr, function (acc, item) {
     return acc + '' + item;
 }, accInitial);
 
-console.log(result);
+console.log(result); // '321'
