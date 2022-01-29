@@ -7,7 +7,7 @@
  * - Первый параметр обязателен и может принимать только число, строку, объект, массив
  * - Второй параметр обязателен и может принимать только число
  */
-function arrayFill (value, size) {
+function arrayFill(value, size) {
     const vType = typeof value;
     if (vType !== 'number' && vType !== 'string' && vType !== 'object' && !Array.isArray(value)) {
         throw new TypeError(value + ' is invalid parameter');
